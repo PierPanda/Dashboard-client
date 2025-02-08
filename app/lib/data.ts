@@ -89,6 +89,8 @@ export async function fetchCardData() {
 }
 
 const ITEMS_PER_PAGE = 6;
+//A partir du composant page qui récupère et transmet les paramètres de recherche à table depuis search (client)
+//Cest cette fonction qui est appelée dans le composant table (server) pour effectuer et afficher la recherche dans page
 export async function fetchFilteredInvoices(
   query: string,
   currentPage: number,
