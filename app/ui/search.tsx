@@ -16,6 +16,7 @@ export default function Search({ placeholder }: { placeholder: string }) {
 
     //Permet d'initialiser une nouvelle instance de useSearchParams
     const params = new URLSearchParams(searchParams);
+    params.set('page', '1');
     //Si la recherche est renseigné, on ajoute le paramètre requete url sinon on delelte
       if (term) {
         params.set('query', term);
