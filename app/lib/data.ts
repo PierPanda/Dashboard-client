@@ -165,6 +165,7 @@ export async function fetchInvoiceById(id: string) {
       amount: invoice.amount / 100,
     }));
 
+    console.log(invoice);
     return invoice[0];
   } catch (error) {
     console.error('Database Error:', error);
@@ -184,8 +185,10 @@ export async function fetchCustomers() {
     `;
 
     return customers;
-  } catch (err) {
-    throw new Error('Failed to fetch all customers.');
+  } catch (error) {
+    console.log('Database Error:', error);
+
+    throw new Error('Failed to fetch all customers.', );
   }
 }
 
