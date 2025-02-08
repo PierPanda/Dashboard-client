@@ -1,3 +1,5 @@
+'use client';
+
 import { clsx } from 'clsx';
 import Link from 'next/link';
 import { lusitana } from '@/app/ui/fonts';
@@ -9,6 +11,7 @@ interface Breadcrumb {
 }
 
 export default function Breadcrumbs({
+
   breadcrumbs,
 }: {
   breadcrumbs: Breadcrumb[];
@@ -33,4 +36,6 @@ export default function Breadcrumbs({
       </ol>
     </nav>
   );
+  console.log('Breadcrumbs received:', breadcrumbs);
+
 }
