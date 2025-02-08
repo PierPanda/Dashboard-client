@@ -32,6 +32,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           direction="left"
           // permet d'aller à la page précédente
           href={createPageURL(currentPage - 1)}
+          // si la page actuelle est inférieure ou égale à 1, le bouton est désactivé
           isDisabled={currentPage <= 1}
         />
 
@@ -60,6 +61,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           direction="right"
           // permet d'aller à la page suivante
           href={createPageURL(currentPage + 1)}
+          // si la page actuelle est supérieure ou égale au nombre total de pages, le bouton est désactivé
           isDisabled={currentPage >= totalPages}
         />
       </div>
