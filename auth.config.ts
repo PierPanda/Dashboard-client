@@ -18,5 +18,4 @@ export const authConfig = {
       return true;
     },
   },
-  providers: [],
 } satisfies NextAuthConfig;
